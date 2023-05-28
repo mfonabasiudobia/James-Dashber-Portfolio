@@ -4,7 +4,6 @@ import { HomeTemplateModel } from "./Models/HomeTemplateModel";
 const HomeTemplate: React.FC<HomeTemplateModel> = ({
   navigation,
   hero,
-  children,
   about,
   footer,
 }) => {
@@ -13,7 +12,6 @@ const HomeTemplate: React.FC<HomeTemplateModel> = ({
       {navigation}
       {hero}
       {about}
-      {children}
       {footer}
     </React.Fragment>
   );

@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
 export interface HomeTemplateModel {
-  children: ReactNode;
+  children?: ReactNode;
   hero: ReactNode;
   navigation : ReactNode;
   about: ReactNode;

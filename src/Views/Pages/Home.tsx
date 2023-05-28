@@ -5,7 +5,6 @@ const Home: React.FC = () => {
   return (
     <HomeTemplate
       hero={<MainHero />}
-      children=""
       navigation={<MainNavigation />}
       about={<About />}
       footer={<MainFooter />}
