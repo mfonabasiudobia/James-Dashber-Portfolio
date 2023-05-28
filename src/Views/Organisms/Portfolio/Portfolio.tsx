@@ -40,7 +40,7 @@ const Portfolio: React.FC<PortfolioModel> = () => {
         </List>
 
         {[1, 2, 3].map((item, index) => (
-          <Box className="grid md:grid-cols-3 gap-5">
+          <Box className="grid md:grid-cols-3 gap-5" key={index}>
             <Image
               alt="Logo"
               variant={"square"}
