@@ -5,5 +5,6 @@ export interface HomeTemplateModel {
   hero: ReactNode;
   navigation : ReactNode;
   about: ReactNode;
+  portfolio : ReactNode;
   footer: ReactNode;
 };

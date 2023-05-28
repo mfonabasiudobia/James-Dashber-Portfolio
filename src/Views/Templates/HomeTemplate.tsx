@@ -5,6 +5,7 @@ const HomeTemplate: React.FC<HomeTemplateModel> = ({
   navigation,
   hero,
   about,
+  portfolio,
   footer,
 }) => {
   return (
@@ -12,6 +13,7 @@ const HomeTemplate: React.FC<HomeTemplateModel> = ({
       {navigation}
       {hero}
       {about}
+      {portfolio}
       {footer}
     </React.Fragment>
   );

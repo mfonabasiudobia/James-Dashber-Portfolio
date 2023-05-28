@@ -1,4 +1,5 @@
 import {
+  Box,
   Container,
   Drawer,
   IconButton,
@@ -8,7 +9,6 @@ import {
   TextLink,
 } from "@/Views/Atoms";
 import { List, ListItem } from "@/Views/Molecules";
-import Logo from "@/images/logo.png";
 import { MainMobileNavigationModel } from "./Models/MainMobileNavigationModel";
 
 const MainMobileNavigation: React.FC<MainMobileNavigationModel> = ({
@@ -16,68 +16,44 @@ const MainMobileNavigation: React.FC<MainMobileNavigationModel> = ({
   closeDrawer,
 }) => {
   const styles = {
-    navItem: `py-3 px-5 hover:bg-light block w-full`,
+    navItem: `py-3 px-5 block text-center w-full`,
   };
 
   return (
     <Drawer
       isOpen={isOpen}
       closeDrawer={closeDrawer}
-      size="90vw"
-      className="flex flex-col"
+      size="100vw"
       customIdSuffix="main-mobile-drawer"
     >
-      <Container
-        variant="fluid"
-        className="py-5 relative flex items-center justify-center"
-      >
-        <IconButton
-          name="AiOutlineClose"
-          className="absolute left-3 top-1/3"
-          type="ai"
-          onClick={closeDrawer}
-        />
-        <TextLink href="/">
-          <Image
-            src={Logo}
-            alt="Logo"
-            variant="square"
-            fill={false}
-            width={70}
-          />
-        </TextLink>
-      </Container>
-      <List alignment="vertical" className="flex-1">
-        <ListItem
-          Item={
-            <TextLink href="/" text="Hangbags" className={styles.navItem} />
-          }
-        />
-        <ListItem
-          Item={
-            <TextLink href="/" text="Contact Us" className={styles.navItem} />
-          }
-        />
-      </List>
-      <Container variant="fluid">
-        <List
-          alignment="horizontal"
-          childrenClassName="font-light text-sm"
-          className="py-5 space-x-2"
+      <Box className="bg-primary h-full">
+        <Container
+          variant="fluid"
+          color="success"
+          className="py-5 flex items-center justify-between border-b-2 border-success"
         >
-          <ListItem
-            Item={<IconLinkButton href="/" type="ai" name="AiFillFacebook" />}
-          />
-          <ListItem
-            Item={
-              <IconLinkButton href="/" type="ai" name="AiOutlineInstagram" />
-            }
-          />
-          <ListItem
-            Item={<IconLinkButton href="/" type="ai" name="AiFillYoutube" />}
-          />
-        </List>
-      </Container>
+          <TextLink href="/" text={`james_dasher`} />
+
+          <IconButton name="AiOutlineClose" type="ai" onClick={closeDrawer} />
+        </Container>
+
+        <Container
+          variant="fluid"
+          color="white"
+          className="flex items-center justify-center h-full"
+        >
+          <List alignment="vertical" className="flex-1">
+            {["Link 01", "Link 02", "Link 03", "Link 04"].map((item, index) => (
+              <ListItem
+                key={index}
+                Item={
+                  <TextLink href="/" text={item} className={styles.navItem} />
+                }
+              />
+            ))}
+          </List>
+        </Container>
+      </Box>
     </Drawer>
   );
 };

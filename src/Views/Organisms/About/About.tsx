@@ -1,4 +1,4 @@
-import { Container, Box, Image, Text, Button, IconButton } from "@/Views/Atoms";
+import { Container, Box, Image, Text } from "@/Views/Atoms";
 import { AboutModel } from "./Models/AboutModel";
 import Logos from "@/images/logos.png";
 

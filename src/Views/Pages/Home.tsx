@@ -1,4 +1,10 @@
-import { MainHero, MainNavigation, About, MainFooter } from "@/Views/Organisms";
+import {
+  MainHero,
+  MainNavigation,
+  About,
+  MainFooter,
+  Portfolio,
+} from "@/Views/Organisms";
 import { HomeTemplate } from "@/Views/Templates";
 
 const Home: React.FC = () => {
@@ -7,6 +13,7 @@ const Home: React.FC = () => {
       hero={<MainHero />}
       navigation={<MainNavigation />}
       about={<About />}
+      portfolio={<Portfolio />}
       footer={<MainFooter />}
     />
   );

@@ -16,21 +16,35 @@ const ListItem: React.FC<ListItemModel> = ({
   spacing,
   LeftItem,
   Item,
-  RightItem }) => {
-
+  RightItem,
+}) => {
   const styles = {
-    importedStyles: useAtomStyle({ size, color, margin, padding, className, elevation, align, weight, spacingX, spacingY, spacing }),
-  }
+    importedStyles: useAtomStyle({
+      size,
+      color,
+      margin,
+      padding,
+      className,
+      elevation,
+      align,
+      weight,
+      spacingX,
+      spacingY,
+      spacing,
+    }),
+  };
 
   return (
-    <li className={`${Object.values(styles).join(" ")} flex items-center space-x-4`}>
+    <li
+      className={`${Object.values(styles).join(
+        " "
+      )} flex items-center space-x-4`}
+    >
       {LeftItem && LeftItem}
       {Item && Item}
       {RightItem && RightItem}
     </li>
   );
-
 };
-
 
 export default ListItem;

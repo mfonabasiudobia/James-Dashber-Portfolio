@@ -1,5 +1,13 @@
 import ProfilePhoto from "@/images/profile-photo.png";
-import { Container, Box, Image, Text, Button, IconButton } from "@/Views/Atoms";
+import {
+  Container,
+  Box,
+  Image,
+  Text,
+  Button,
+  IconButton,
+  TextLink,
+} from "@/Views/Atoms";
 import { MainHeroModel } from "./Models/MainHeroModel";
 
 const MainHeroModel: React.FC<MainHeroModel> = () => {
@@ -36,7 +44,7 @@ const MainHeroModel: React.FC<MainHeroModel> = () => {
   };
 
   return (
-    <Box className="bg-[#010C15]">
+    <Box className="bg-primary">
       <Container variant="fixed" className="grid md:grid-cols-2 min-h-[100vh]">
         <Box className="order-2 md:order-1 flex flex-col justify-center items-center">
           <Image
@@ -49,13 +57,20 @@ const MainHeroModel: React.FC<MainHeroModel> = () => {
           {actionButtonContainer(true)}
         </Box>
         <Box
-          className="order-1 md:order-2 flex flex-col justify-center items-start"
+          className="order-1 md:order-2 flex flex-col justify-end items-start relative"
           spacingY={3}
           padding="py-16"
         >
           <Text variant="span" className="fira-font" size="sm" color="light">
             Hei, Jeg er
           </Text>
+
+          <TextLink
+            href="/"
+            className="absolute top-0 md:top-5 right-0 underline"
+            color="light"
+            text="Download CV"
+          />
           <Box>
             <Text
               variant={"h1"}
