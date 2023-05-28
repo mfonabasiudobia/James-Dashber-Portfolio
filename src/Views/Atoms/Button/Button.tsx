@@ -16,51 +16,71 @@ const Button: React.FC<ButtonModel> = ({
   spacing,
   text,
   onClick,
-  children }) => {
-
+  children,
+}) => {
   const getBackgroundColor = () => {
     switch (color) {
       case "primary":
-        return 'bg-primary';
+        return "bg-primary";
       case "light":
-        return 'bg-light';
+        return "bg-light";
       case "danger":
-        return 'bg-danger';
+        return "bg-danger";
       case "secondary":
-        return 'bg-secondary';
+        return "bg-secondary";
       case "success":
-        return 'bg-success';
+        return "bg-success";
       case "dark":
-        return 'bg-dark';
+        return "bg-dark";
       default:
-        return 'bg-primary';
+        return "bg-primary";
     }
-  }
+  };
 
   const getBorderColor = () => {
     switch (color) {
       case "primary":
-        return 'border-primary';
+        return "border-primary";
       case "light":
-        return 'border-light';
+        return "border-light";
       case "danger":
-        return 'border-danger';
+        return "border-danger";
       case "secondary":
-        return 'border-secondary';
+        return "border-secondary";
       case "success":
-        return 'border-success';
+        return "border-success";
       case "dark":
-        return 'border-dark';
+        return "border-dark";
       default:
-        return 'border-light';
+        return "border-light";
     }
-  }
+  };
 
   const styles = {
-    variantClass: `text-center inline-block rounded px-5 py-2 
-    ${variant === "text" ? '' : variant === "contained" ? `${getBackgroundColor()} text-white hover:bg-opacity-90` : variant === "outlined" ? `border ${getBorderColor()} hover:bg-opacity-90` : null}`,
-    importedStyles: useAtomStyle({ size, color, margin, padding, className, elevation, align, weight, spacingX, spacingY, spacing }),
-  }
+    variantClass: `text-center inline-block rounded py-2 
+    ${
+      variant === "text"
+        ? ""
+        : variant === "contained"
+        ? `${getBackgroundColor()} text-white hover:bg-opacity-90`
+        : variant === "outlined"
+        ? `border ${getBorderColor()} hover:bg-opacity-90`
+        : null
+    }`,
+    importedStyles: useAtomStyle({
+      size,
+      color,
+      margin,
+      padding,
+      className,
+      elevation,
+      align,
+      weight,
+      spacingX,
+      spacingY,
+      spacing,
+    }),
+  };
 
   return (
     <button className={`${Object.values(styles).join(" ")}`} onClick={onClick}>

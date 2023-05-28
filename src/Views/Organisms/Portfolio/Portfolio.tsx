@@ -24,7 +24,11 @@ const Portfolio: React.FC<PortfolioModel> = () => {
           text="PROSJEKTER"
         />
 
-        <List childrenClassName="font-medium fanit-font" alignment="horizontal">
+        <List
+          childrenClassName="font-medium fanit-font"
+          alignment="horizontal"
+          spacingX={7}
+        >
           {["All", "Guided", "JavaScript", "Python"].map((item, index) => (
             <ListItem
               Item={
