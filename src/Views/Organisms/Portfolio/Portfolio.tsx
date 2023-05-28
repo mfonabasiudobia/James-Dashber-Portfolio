@@ -67,7 +67,8 @@ const Portfolio: React.FC<PortfolioModel> = () => {
 
               <Box spacingY={5} className="kanit-font">
                 <List
-                  childrenClassName="rounded-full bg-[#23455A] text-light text-sm px-4 py-1"
+                  childrenClassName="rounded-full bg-[#23455A] text-light text-sm px-4 py-1 whitespace-nowrap mt-2"
+                  className="flex-wrap"
                   alignment="horizontal"
                 >
                   <ListItem Item="Next JS" />
